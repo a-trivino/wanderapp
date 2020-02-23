@@ -1,19 +1,20 @@
 import { red } from '@material-ui/core/colors';
 
-const themeConfigurations: any = {
+const ThemeConfigurations: any = {
   sunset: {
     palette: {
       type: 'light',
       primary: {
-        light: '#FF908B',
-        main: '#D0605E',
-        dark: '#9B3134'
+        light: '#f9683a',
+        main: '#bf360c',
+        dark: '#870000',
+        contrastText: '#e0e0e0'
       },
       secondary: {
-        light: '#C76A1D',
-        main: '#FF994C',
-        dark: '#FFCA7B',
-        contrastText: '#FFF'
+        light: '#a7c0cd',
+        main: '#78909c',
+        dark: '#4b636e',
+        contrastText: '#fafafa'
       },
       error: red
     },
@@ -21,19 +22,19 @@ const themeConfigurations: any = {
       danger: 'orange'
     }
   },
-  greeny: {
+  jungle: {
     palette: {
       type: 'light',
       primary: {
-        light: '#6CABD4',
-        main: '#387CA3',
-        dark: '#005074'
+        light: '#4c8c4a',
+        main: '#1b5e20',
+        dark: '#d7ccc8'
       },
       secondary: {
-        light: '#89F6CF',
-        main: '#55C39E',
-        dark: '#159270',
-        contrastText: '#FFF'
+        light: '#4fb3bf',
+        main: '#00838f',
+        dark: '#005662',
+        contrastText: '#cfd8dc'
       },
       error: red
     },
@@ -45,32 +46,33 @@ const themeConfigurations: any = {
     palette: {
       type: 'light',
       primary: {
-        light: '#C4D8DD',
-        main: '#93A7AB',
-        dark: '#65787C',
-        contrastText: '#FFF'
+        light: '#5ddef4',
+        main: '#00acc1',
+        dark: '#007c91',
+        contrastText: '#fafafa'
       },
       secondary: {
-        light: '#FFB281',
-        main: '#F18153',
-        dark: '#BA5228',
-        contrastText: '#FFF'
+        light: '#ffd95a',
+        main: '#f9a825',
+        dark: '#c17900',
+        contrastText: '#607d8b'
       }
     }
   },
-  tech: {
+  techpark: {
     palette: {
       type: 'light',
       primary: {
-        light: '#87EFFF',
-        main: '#4DBCE9',
-        dark: '#008CB7',
-        contrastText: '#FFF'
+        light: '#819ca9',
+        main: '#546e7a',
+        dark: '#29434e',
+        contrastText: '#ffffff'
       },
       secondary: {
-        light: '#FFFF83',
-        main: '#D1E751',
-        dark: '#9DB516'
+        light: '#62efff',
+        main: '#00bcd4',
+        dark: '#008ba3',
+        contrastText: '#e0e0e0'
       }
     }
   },
@@ -124,4 +126,4 @@ const themeConfigurations: any = {
   }
 };
 
-export default themeConfigurations;
+export default ThemeConfigurations;

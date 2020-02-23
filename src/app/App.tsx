@@ -4,16 +4,21 @@ import './App.css';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
-import WanderTheme from '../@wander/components/WanderTheme/WanderTheme';
 import ChangeThemeDynamically from './main/sandbox/ChangeThemeDynamically';
 import { LayoutContext } from '../contexts/LayoutContext';
 import WanderLayout from '../@wander/layouts/components/WanderLayout/WanderLayout';
 import ProjectStructure from './main/project-structure/ProjectStructure';
-import Prerequisites from './main/prerequisites/Prerequisites';
+import WanderTheme from '../@wander/themes/components/WanderTheme/WanderTheme';
+import appConfig from './configurations/appConfig.json';
 
 function App() {
-  const [theme, setTheme] = useState('default');
-  const [layout, setLayout] = useState('Layout2');
+  const defaultTheme =
+    appConfig && appConfig.theme && appConfig.theme !== '' ? appConfig.theme : 'sunset';
+  const defaultLayout =
+    appConfig && appConfig.layout && appConfig.layout !== '' ? appConfig.layout : 'Layout1';
+
+  const [theme, setTheme] = useState(defaultTheme);
+  const [layout, setLayout] = useState(defaultLayout);
   console.log('app');
 
   return (

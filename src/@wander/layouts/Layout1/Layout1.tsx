@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Grid } from '@material-ui/core';
 import WanderNav from '../components/WanderNav/WanderNav';
-import WanderThemeSelector from '../../components/WanderThemeSelector/WanderThemeSelector';
 import WanderLayoutSelector from '../components/WanderLayoutSelector/WanderLayoutSelector';
 import WanderHeader from '../components/WanderHeader/WanderHeader';
+import WanderThemeSelector from '../../themes/components/WanderThemeSelector/WanderThemeSelector';
 
 const Layout1: React.FC = (props) => {
   return (
