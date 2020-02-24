@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeProvider, Theme, createMuiTheme } from '@material-ui/core/styles';
-import { ThemeContext } from '../../../../contexts/ThemeContext';
-import ThemeConfigurations from '../../ThemeConfigurations';
+import ThemeConfigurations from '../../../configurations/ThemeConfigurations';
+import { ThemeContext } from '../../../contexts/ThemeContext';
 
 const WanderTheme: React.FC = (props) => {
   const themeContext = useContext(ThemeContext);

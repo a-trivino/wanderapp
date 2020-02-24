@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-
 import { Paper } from '@material-ui/core';
-import { LayoutContext } from '../../../../contexts/LayoutContext';
-import Layouts from '../../Layouts';
+
+import Layouts from '../../../layouts/Layouts';
+import { LayoutContext } from '../../../contexts/LayoutContext';
 
 const WanderLayout: React.FC = (props) => {
   const layouts = Layouts;

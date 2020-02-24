@@ -70,49 +70,62 @@ const ChangeThemeDynamically = () => {
       </pre>
 
       <p>
-        With that in mind, we know the the following:
-        <ul>
+        With that in mind, we can do the following:
+        <ol>
           <li>
-            We can have a configuration file that contains a JSON with the various themes I'd like
-            make available. (themeConfigurations.ts)
+            Create a configuration file that contains a JSON with the various themes that will be
+            available to the app. [themeConfigurations.ts]
           </li>
           <li>
-            We can create a component that wraps the ThemeProvider. This component will be
-            responsible for figuring out what theme to pass to the ThemeProvider. (WanderTheme.tsx)
+            Create a component which will be responsible for figuring out what theme to pass to the
+            ThemeProvider. [WanderTheme.tsx]
           </li>
           <li>
-            We can use WanderTheme.tsx in my App.tsx so that the theme the user chooses is applied
-            to the whole app.
+            Update App.tsx to use the component we created in #2 (WanderTheme.tsx), so that the
+            theme the user chooses is applied to the whole app.
           </li>
           <li>
-            We can create a separate component that will allow a user to choose a theme.
-            (WanderThemeSelector.tsx)
+            Create another component that will allow a user to choose a theme.
+            [WanderThemeSelector.tsx]
           </li>
-        </ul>
+        </ol>
         <p>
           But the problem is, how will the WanderTheme component know which theme is selected by the
           user in WanderThemeSelector?
         </p>
       </p>
       <Typography variant='h5'>Enter the useContext and useState hooks</Typography>
+      <p>
+        First, we will need to use the useState hook to keep track of the theme selected by user
+      </p>
+      <p>Then, we will be using the useContext hook to share the information between components.</p>
+
+      <p>To wire it up, let's:</p>
+
       <ol>
         <li>
           {' '}
           Create a ThemeContext (see ./contexts/ThemeContext.ts). This returns a context with a
           useState hook for theme and setTheme.
         </li>
+
         <li>
           In the App component, use the {`<ThemeContext.Provider>`}, passing to it a useState hook
           for theme and setTheme.
           <pre>
             <code>
               {`
+  const [theme, setTheme] = useState(defaultTheme);
+  
+
+  return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <WanderTheme>
       .
       .
       </WanderTheme>
     </ThemeContext.Provider>
+  )
             `}
             </code>
           </pre>

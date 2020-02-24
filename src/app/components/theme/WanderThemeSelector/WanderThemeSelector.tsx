@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
 import { Button } from '@material-ui/core';
-
-import { ThemeContext } from '../../../../contexts/ThemeContext';
-import ThemeConfigurations from '../../ThemeConfigurations';
+import ThemeConfigurations from '../../../configurations/ThemeConfigurations';
+import { ThemeContext } from '../../../contexts/ThemeContext';
 
 const WanderThemeSelector: React.FC = () => {
   var keys = Object.keys(ThemeConfigurations);

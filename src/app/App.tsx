@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
 
-import { ThemeContext } from '../contexts/ThemeContext';
+import { ThemeContext } from './contexts/ThemeContext';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import ChangeThemeDynamically from './main/sandbox/ChangeThemeDynamically';
-import { LayoutContext } from '../contexts/LayoutContext';
-import WanderLayout from '../@wander/layouts/components/WanderLayout/WanderLayout';
+import WanderTheme from './components/theme/WanderTheme/WanderTheme';
+import { LayoutContext } from './contexts/LayoutContext';
+import WanderLayout from './components/layout/WanderLayout/WanderLayout';
 import ProjectStructure from './main/project-structure/ProjectStructure';
-import WanderTheme from '../@wander/themes/components/WanderTheme/WanderTheme';
 import appConfig from './configurations/appConfig.json';
 
 function App() {

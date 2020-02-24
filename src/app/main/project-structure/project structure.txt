@@ -1,0 +1,39 @@
+
+
+
+
+
+
+
+
+
+
+
+@wander:  Core component folder.  Contains components that can be reused by other components.  
+          These components can live on their own outside of the application.
+
+
+App:  Main application folder.  This folder contains files that are used within 
+      the context of the application itself.
+
+
+    Components:  Contains components that are reusable in the context of the app.
+
+
+    Configurations: Contains configuration files.
+
+
+    Contexts:  Contains context definitions.
+
+
+    Layouts:  Contains various page layouts available for the application.
+
+
+    Main:  Contains the content pages of the App.
+
+
+    Models:  Contains type and interface definitions for the different domain objects 
+             used in the app.
+
+
+    Services:  Contains various services that perform api calls, authentication, etc.
